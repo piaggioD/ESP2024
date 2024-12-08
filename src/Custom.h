@@ -7,7 +7,7 @@
     2) define your own settings below
     3) define USE_CUSTOM_H as a build flags. ie : export PLATFORMIO_BUILD_FLAGS="'-DUSE_CUSTOM_H'"
  */
-// 123
+//123
 
 /*
  #######################################################################################################
@@ -355,10 +355,10 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define FEATURE_SERVO  1   // Uncomment and set to 0 to explicitly disable SERVO support
 
 
-// #define USES_P001   // Switch
-// #define USES_P002   // ADC
-// #define USES_P003   // Pulse
-// #define USES_P004   // 1-Wire Temperature (Dallas/Maxim DS18B20)
+ #define USES_P001   // Switch
+ #define USES_P002   // ADC
+ #define USES_P003   // Pulse
+ #define USES_P004   // 1-Wire Temperature (Dallas/Maxim DS18B20)
 // #define USES_P005   // DHT11/12/22 SONOFF2301/7021/MS01
 // #define USES_P006   // BMP085/180
 // #define USES_P007   // PCF8591
@@ -368,14 +368,14 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P010   // BH1750
 // #define USES_P011   // ProMini Extender
 // #define USES_P012   // LCD2004
-// #define USES_P013   // HC-SR04/RCW-0001
+   #define USES_P013   // HC-SR04/RCW-0001
 // #define USES_P014   // SI70xx/HTU21D
 // #define USES_P015   // TSL2561
 // #define USES_P017   // PN532
 // #define USES_P018   // GP2Y10
 // #define USES_P019   // PCF8574
 
-// #define USES_P020   // Ser2Net
+   #define USES_P020   // Ser2Net
 // #define USES_P021   // Level Control
 // #define USES_P022   // PCA9685
 // #define USES_P023   // OLED SSD1306
@@ -388,16 +388,16 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 
 // #define USES_P031   // SHT1x
 // #define USES_P032   // MS5611 (GY-63)
-// #define USES_P033   // Dummy Device
+  #define USES_P033   // Dummy Device
 // #define USES_P034   // DHT12
 // #define USES_P036   // OLED SSD1306/SH1106 Framed
 // #define P036_FEATURE_DISPLAY_PREVIEW   1 // Enable Preview feature, shows on-display content on Devices overview page
 // #define P036_FEATURE_ALIGN_PREVIEW     1 // Enable center/right-align feature when preview is enabled (auto-disabled for 1M builds)
 // #define P036_ENABLE_TICKER   1 // Enable ticker function
-// #define USES_P037   // MQTT Import
-//   #define P037_MAPPING_SUPPORT 1 // Enable Value mapping support
-//   #define P037_FILTER_SUPPORT  1 // Enable filtering support
-//   #define P037_JSON_SUPPORT    1 // Enable Json support
+   #define USES_P037   // MQTT Import
+   #define P037_MAPPING_SUPPORT 1 // Enable Value mapping support
+    #define P037_FILTER_SUPPORT  1 // Enable filtering support
+    #define P037_JSON_SUPPORT    1 // Enable Json support
 // #define USES_P038   // NeoPixel
 //   #define P038_FEATURE_NEOPIXELFOR 1 // Enable NeoPixelFor/NeoPixelForHSV commands (default enabled for ESP32)
 // #define USES_P039   // Thermocouple
@@ -410,7 +410,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P045   // MPU6050
 // #define USES_P046   // Ventus W266
 // #define USES_P047   // Soil moisture sensor
-// #define USES_P048   // Motoshield v2
+  #define USES_P048   // Motoshield v2
 // #define USES_P049   // MH-Z19
 
 // #define USES_P050   // TCS34725 RGB Color Sensor with IR filter and White LED
@@ -418,11 +418,11 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P052   // SenseAir
 // #define USES_P053   // PMSx003 / PMSx003ST
 // #define USES_P054   // DMX512
-// #define USES_P055   // Chiming
+   #define USES_P055   // Chiming
 // #define USES_P056   // SDS011/018/198
 // #define USES_P057   // HT16K33_LED
 // #define USES_P058   // HT16K33_KeyPad
-// #define USES_P059   // Rotary Encoder
+  #define USES_P059   // Rotary Encoder
 
 // #define USES_P060   // MCP3221
 // #define USES_P061   // PCF8574 / MCP23017 / PCA8575
@@ -444,18 +444,18 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P076   // HLW8012/BL0937 (Shelly Plug S, Sonoff POW R1, Huafan SS, KMC 70011, Aplic WDP303075, SK03 Outdoor, BlitzWolf SHP, Teckin, Teckin US, Gosund SP1 v23)
 // #define USES_P077   // CSE7766 (Sonoff S31, Sonoff POW R2, Sonoff POW R3xx(D), Sonoff Dual R3)
 // #define USES_P078   // Eastron SDMxxx Modbus
-// #define USES_P079   // Wemos / Lolin Motorshield
+   #define USES_P079   // Wemos / Lolin Motorshield
 
 // #define USES_P080   // iButton Sensor  DS1990A
-// #define USES_P081   // Cron
+   #define USES_P081   // Cron
 // #define USES_P082   // GPS
 // #define USES_P083   // SGP30 TVOC
 // #define USES_P084   // VEML6070
 // #define USES_P085   // AcuDC24x
-// #define USES_P086   // Receiving values according Homie convention. Works together with C014 Homie controller
-// #define USES_P087   // Serial Proxy
+  #define USES_P086   // Receiving values according Homie convention. Works together with C014 Homie controller
+  #define USES_P087   // Serial Proxy
 // #define USES_P088   // HeatpumpIR
-// #define USES_P089   // Ping
+  #define USES_P089   // Ping
 
 // #define USES_P090   // CCS811 TVOC
 // #define USES_P091   // Serial MCU controlled switch
@@ -465,7 +465,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P095   // ILI934x / ILI948x
 // #define USES_P096   // eInk
 // #define USES_P097   // ESP32 Touch
-// #define USES_P098   // PWM Motor
+ #define USES_P098   // PWM Motor
 // #define USES_P099   // XPT2046 touchscreen
 
 // #define USES_P100   // DS2423 counter
@@ -514,7 +514,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P133   // LTR390 UV
 // #define USES_P134   // A02YYUW
 // #define USES_P135   // SCD4x
-//   #define P135_FEATURE_RESET_COMMANDS  1 // Enable/Disable quite spacious (~950 bytes) 'selftest' and 'factoryreset' subcommands
+   #define P135_FEATURE_RESET_COMMANDS  1 // Enable/Disable quite spacious (~950 bytes) 'selftest' and 'factoryreset' subcommands
 // #define USES_P137   // AXP192
 // #define USES_P138   // IP5306
 
@@ -527,7 +527,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 
 // #define USES_P144   // PM1006(K) (Vindriktning)
 // #define USES_P145   // MQxxx (MQ135 CO2, MQ3 Alcohol)
-// #define USES_P146   // Cache Reader
+  #define USES_P146   // Cache Reader
 // #define USES_P147   // SGP4x
 //   #define P147_FEATURE_GASINDEXALGORITHM    0 // Enabled by default, can be turned off here
 
@@ -536,7 +536,7 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_P151   // Honeywell Pressure
 // #define USES_P152   // ESP32 DAC
 // #define USES_P153   // SHT4x
-// #define USES_P154   // BMP3xx I2C
+// #define USES_P154   // BMP3xx
 
 // #define USES_P159   // Presence - LD2410 Radar detection
 
@@ -562,16 +562,16 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
 // #define USES_C004   // ThingSpeak
 // #define USES_C005   // Home Assistant (openHAB) MQTT
 // #define USES_C006   // PiDome MQTT
-// #define USES_C007   // Emoncms
-// #define USES_C008   // Generic HTTP
+   #define USES_C007   // Emoncms
+   #define USES_C008   // Generic HTTP
 // #define USES_C009   // FHEM HTTP
-// #define USES_C010   // Generic UDP
-// #define USES_C011   // Generic HTTP Advanced
-// #define USES_C012   // Blynk HTTP
-// #define USES_C013   // ESPEasy P2P network
-// #define USES_C014   // homie 3 & 4dev MQTT
-// #define USES_C015   // Blynk
-// #define USES_C016   // Cache controller
+   #define USES_C010   // Generic UDP
+   #define USES_C011   // Generic HTTP Advanced
+   #define USES_C012   // Blynk HTTP
+   #define USES_C013   // ESPEasy P2P network
+   #define USES_C014   // homie 3 & 4dev MQTT
+   #define USES_C015   // Blynk
+   #define USES_C016   // Cache controller
 // #define USES_C017   // Zabbix
 // #define USES_C018   // TTN/RN2483
 
@@ -583,8 +583,8 @@ static const char DATA_ESPEASY_DEFAULT_MIN_CSS[] PROGMEM = {
  */
 
 
-// #define USES_N001   // Email
-// #define USES_N002   // Buzzer
+  #define USES_N001   // Email
+  #define USES_N002   // Buzzer
 
 
 #endif // ESPEASY_CUSTOM_H
