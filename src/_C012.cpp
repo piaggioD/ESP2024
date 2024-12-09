@@ -69,7 +69,7 @@ bool CPlugin_012(CPlugin::Function function, struct EventStruct *event, String& 
 
         if (isvalid) {
           move_special(element->txt[x], strformat(
-            F("update/V%d?value=%s"), 
+            F("update?V%d=%s"), 
             event->idx + x, 
             formattedValue.c_str()));
 
