@@ -19,10 +19,19 @@
 #include <utility/BlynkUtility.h>
 
 template <class Transp>
+//Áno, v súbore BlynkProtocol.h máme definovanú šablónu triedy BlynkProtocol, ktorá dedí od triedy BlynkApi. 
+// Táto šablóna používa ako parameter triedu Transp, ktorá reprezentuje transportnú vrstvu používanú na komunikáciu s Blynk serverom.
 class BlynkProtocol
     : public BlynkApi< BlynkProtocol<Transp> >
+    //Táto deklarácia definuje šablónu triedy BlynkProtocol, ktorá dedí od BlynkApi. 
+    // Trieda BlynkApi je tiež šablónová a prijíma ako parameter BlynkProtocol<Transp>.
+
+    // Trieda BlynkProtocol je šablónová trieda, ktorá dedí od BlynkApi s parametrom BlynkProtocol<Transp>.
+    // 'Transp' je šablónový parameter, ktorý reprezentuje transportnú vrstvu používanú na komunikáciu.
 {
     friend class BlynkApi< BlynkProtocol<Transp> >;
+    // Umožňuje triede BlynkApi prístup k privátnym a chráneným členom triedy BlynkProtocol.
+
 public:
     enum BlynkState {
         CONNECTING,
@@ -30,6 +39,9 @@ public:
         DISCONNECTED,
         TOKEN_INVALID,
     };
+    // Konštruktor triedy BlynkProtocol inicializuje pripojenie a všetky potrebné členy.
+    // 'conn' je inicializovaný s 'transp', ktorý je inštanciou transportnej vrstvy.
+
 
     BlynkProtocol(Transp& transp)
         : conn(transp)
@@ -43,10 +55,14 @@ public:
         , nesting(0)
         , state(CONNECTING)
     {}
+    // Konštruktor triedy BlynkProtocol inicializuje pripojenie a všetky potrebné členy.
+    // 'conn' je inicializovaný s 'transp', ktorý je inštanciou transportnej vrstvy.
 
     bool connected() const { return state == CONNECTED; }
+    // Táto metóda vracia true, ak je stav pripojenia 'CONNECTED'.
 
     bool isTokenInvalid() const { return state == TOKEN_INVALID; }
+    // Táto metóda vracia true, ak je stav pripojenia 'TOKEN_INVALID'.
 
     bool connect(uint32_t timeout = BLYNK_TIMEOUT_MS*3) {
         conn.disconnect();
